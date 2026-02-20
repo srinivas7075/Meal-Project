@@ -1,0 +1,90 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand a {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar-links a {
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    transition: color 0.3s, transform 0.2s;
+    position: relative;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+    color: var(--text-main);
+    transform: translateY(-1px);
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s;
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+.btn-logout {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.btn-logout:hover {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .navbar-links {
+        gap: 1rem;
+    }
+
+    .navbar-brand a {
+        font-size: 1.3rem;
+    }
+}

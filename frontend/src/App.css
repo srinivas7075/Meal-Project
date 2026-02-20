@@ -1,0 +1,86 @@
+:root {
+  --bg-dark: #121212;
+  --bg-card: #1E1E1E;
+  --primary: #FF4757;
+  /* Fire Orange */
+  --secondary: #FFA502;
+  /* Goldenrod */
+  --text-main: #F1F2F6;
+  --text-muted: #A4B0BE;
+  --glass-bg: rgba(30, 30, 30, 0.6);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.2);
+}

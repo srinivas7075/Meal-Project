@@ -1,0 +1,10 @@
+/* Reseting default vite styles */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  /* Override default flex */
+  place-items: initial;
+}
